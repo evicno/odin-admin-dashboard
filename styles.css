@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-rows: 150px 400px;
+}
+
+.header-first,
+.header-last {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.content-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+}
