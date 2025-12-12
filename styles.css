@@ -93,8 +93,9 @@ label,
 
 .content-container {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     background-color: rgb(225, 229, 233);
+    gap: 20px;
 }
 
 .projects {
@@ -126,10 +127,12 @@ input {
 
 .header-first img[alt="User profile icon"] {
     height: 30px;
+    border-radius: 50%;
 }
 
 .header-last img {
     height: 60px;
+    border-radius: 50%;
 }
 
 .user p {
@@ -163,15 +166,14 @@ button {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
     justify-content: center;
     align-items: center;
+    height: 630px;
 }
 
 .project-item {
-    height: 150px;
-    width: 320px;
     background-color: white;
     padding: 10px;
     box-shadow: -3px 11px 6px -1px rgba(0, 0, 0, 0.1);
@@ -179,6 +181,7 @@ button {
     border-left: solid 6px rgb(235, 154, 124);
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
+    height: 180px;
 }
 
 h3 {
@@ -197,4 +200,51 @@ h3 {
     gap: 16px;
     justify-self: end;
     padding-right: 10px;
+}
+
+
+.announcements,
+.trending {
+    display: flex;
+    flex-direction: column; 
+    padding: 8px 16px;
+    background-color: white;
+    box-shadow: -3px 11px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.announcements h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.announcements p,
+.trending-item p {
+    font-size: 12px;
+    color: rgb(119, 118, 118);
+}
+
+.announcements-item {
+    margin: 8px;
+}
+
+.announcements .announcements-item:nth-child(2) {
+    border-top: solid 1px rgb(119, 118, 118);
+    border-bottom: solid 1px rgb(119, 118, 118);
+    margin: 0;
+    padding: 8px;
+}
+
+.trending img {
+    height: 30px;
+    border-radius: 50%;
+    filter: invert(0);
+}
+
+.trending-item {
+    padding: 8px 0;
+    display: flex;
+    gap: 24px;
+    align-items: center;
 }
