@@ -17,7 +17,7 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 300px 800px;
+    grid-template-columns: 300px minmax(300px, 4fr);
     height: 100vh;
     width: 100vw;
 }
@@ -63,10 +63,30 @@ h1 img {
     grid-template-rows: 150px 400px;
 }
 
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.search,
+label,
+.user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .header-first,
-.header-last {
+.header-last,
+.intro {
     display: flex;
     justify-content: space-between;
+    padding-right: 40px;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
 } 
 
 .content-container {
@@ -83,4 +103,51 @@ h1 img {
 .right-content {
     display: flex;
     flex-direction: column;
+}
+
+label img,
+.header img {
+    height: 20px;
+    filter: invert(0);
+}
+
+input {
+    width : 500px;
+    height: 25px;
+    padding-left: 8px;
+    border-radius: 10px;
+    background-color: rgb(225, 229, 233);
+    border-style: none;
+}
+
+.header-first img[alt="User profile icon"] {
+    height: 30px;
+}
+
+.header-last img {
+    height: 60px;
+}
+
+.user p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hello p {
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    height: 30px;
+    width: 100px;
+    background-color: #0099ff;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border-style: none;
 }
